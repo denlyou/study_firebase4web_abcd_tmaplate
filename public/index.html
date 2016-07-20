@@ -41,9 +41,22 @@
           <li><a href="https://www.facebook.com/groups/aboutCoding/" target="_blank" class="indigo-text">ABCD</a></li>
           <li><a href="http://sbsoft.kr/" target="_blank" class="indigo-text">MadeBy</a></li>
           <li class="divider"></li>
-          <li><a href="#" id="BTN_NETWORKING">참가자</a></li>
+          <li><a href="#" class="BTN_NETWORKING">참가자</a></li>
         </ul>
       <!-- 모바일에서 보이는 메인 메뉴 -->
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="hosting.html">Hosting</a></li>
+        <li><a href="auth.html">Auth</a></li>
+        <li><a href="database.html">Database</a></li>
+        <li><a href="storage.html">Storage</a></li>
+        <li class="divider"></li>
+        <li><a href="https://m.facebook.com/groups/aboutCoding/" target="_blank">ABCD</a></li>
+        <li><a href="http://sbsoft.kr/" target="_blank">MadeBy</a></li>
+        <li class="divider"></li>
+        <li><a href="#" class="BTN_NETWORKING">참가자</a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+
 
     </div>
   </nav>
@@ -179,8 +192,9 @@
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script type="text/javascript" src="js/materialize.min.js"></script>
   <script type="text/javascript">
+    $('.button-collapse').sideNav();
     $(".dropdown-button").dropdown();
-    $("#BTN_NETWORKING").click(function(){
+    $(".BTN_NETWORKING").click(function(){
       $('#_my_name').val($("#MY_NAME").text());
       $('#_my_job').val($("#MY_JOB").text());
       $('#_my_domain').val(location.href);
